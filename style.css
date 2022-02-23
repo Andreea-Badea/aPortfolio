@@ -7,7 +7,7 @@ body {
     color: #151515;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, input, textarea{
     font-family: 'Poppins', sans-serif;
 }
 
@@ -31,13 +31,27 @@ p {
     line-height: 1.7;
 }
 
+header {
+    position: sticky;
+    background: #151515;
+    left: 12rem;
+    top: 0;
+    width: fit-content;
+    z-index: 99;
+}
+
+nav h2 {
+    color: white;
+    margin-left: 1rem;
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+}
+
 nav {
-    /* position: sticky; */
-    /* position: absolute; */
-    /* top: 0; */
-    /* left: 25%; */
-    /* background: black; */
-    /* width: fit-content; */
+    display: flex;
+    align-items: center;
+    margin: 0 2.5rem 0 2rem;
+    height: 3.5rem;
 }
 
 .banner {
@@ -48,9 +62,10 @@ nav {
     padding-top: 20vh;
     height: 80vh;
     letter-spacing: 3px;
+    margin-top: -3.5rem;
 }
 
-    .banner::before {
+.banner::before {
     content: '';
     position: absolute;
     top: 0px;
@@ -60,7 +75,7 @@ nav {
     background: url("images/heroBanner.jpg");
     background-size: cover;
     opacity: 0.25;
-    }
+}
 
 .banner h2{
     margin: 6rem auto 0;
@@ -73,6 +88,10 @@ nav {
     text-transform: uppercase;
     font-weight: lighter;
     font-family: 'Lora', serif;
+}
+
+.banner button a, .banner button a:visited {
+    color: white;
 }
 
 .content {
@@ -94,7 +113,7 @@ button:hover {
     transition: all 0.3s ease-in-out;
 }
 
-.intro, .container, .resume .description, .portfolio {
+.intro, .container, .resume .description, .portfolio, .services .description {
     width: 60%;
     margin: 2rem auto 3rem;
 }
@@ -196,12 +215,6 @@ button:hover {
     justify-self: left;
     margin-left: 1rem;
 }
-
-/* .resume .description {
-    line-height: 1.7;
-    font-size: 1.3rem;
-} */
-
 .exp, .edu {
     color: #0A0;
 }
@@ -348,8 +361,152 @@ button:hover {
 }
 
 .services {
-    background: url("images/servicesBanner1.jpg");
+    /* background: url("images/servicesBanner1.jpg"); */
+    background-color: #151515;
     text-align: center;
-    height: 40rem;
+    padding: 6rem;
     background-size: cover;
+    color: white;
+    position: relative;
+}
+
+.services::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background: url("images/servicesBanner1.jpg");
+    background-size: cover;
+    opacity: 0.25;
+    padding: 6rem;
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 85%;
+    margin: auto;
+}
+
+.services-card {
+    width: 28%;
+    border-radius: .3rem;
+    flex-grow: 1;
+    margin: 1.5rem;
+}
+
+.stats {
+    display: grid;
+    background-color: #007700;
+    color: white;
+    grid-template-columns: repeat(6, 1fr);
+    padding: 3rem 0;
+    column-gap: 1rem;
+    text-align: center;
+}
+
+.stats h2 {
+    color: white;
+    opacity: .7;
+}
+
+.stat {
+    border-right: 1px solid #808080;
+    padding: 0 3rem;
+}
+
+.contact {
+    text-align: center;
+    background-color: #151515;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.contact h3 {
+    color: white;
+}
+
+.contact .description {
+    width: 40%;
+    margin: auto;
+}
+
+.form {
+    display: grid;
+    margin: 3rem auto 0;
+    width: 50%;
+}
+
+input {
+    height: 1rem;
+}
+
+input, textarea {
+    padding: 1.8rem 2rem;
+    background-color: #151515;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 0;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 1rem;
+}
+
+input:focus, textarea:focus {
+    color: white;
+    outline: none;
+    border-bottom: 1px solid #0a0;
+}
+
+.form button {
+    background-color: #0a0;
+    border: 3px solid #0a0;
+    padding: 1.5rem 2rem;
+    margin-top: 2rem;
+    font-size: 1rem;
+}
+
+.form button:hover {
+    background-color: #007700;
+    border: 3px solid #007700;
+}
+
+.contact-details {
+    background-color: #151515;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.contact-details-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 80%;
+    align-content: space-between;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+.go-top {
+    background-color: #0A0;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 600;
+}
+
+.go-top:hover {
+    background-color: black;
+}
+
+.bi-arrow-up-short {
+    padding: 1rem;
+}
+
+a, a:visited{
+    text-decoration: none;
+}
+
+a:visited {
+    color: #007700;
 }
