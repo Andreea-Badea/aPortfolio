@@ -123,26 +123,35 @@
                 <p class="description">Panoplosaurus Sigilmassasaurus Marisaurus Jainosaurus Qijianglong Ligabuesaurus Spinops Araucanoraptor Coronosaurus Pleurocoelus Platyceratops Protorosaurus Supersaurus Jobaria Quetecsaurus Tribelesodon Laelaps Chindesaurus Eoabelisaurus Veterupristisaurus Ischioceratops Bellusaurus Cryptosaurus Jenghizkhan Hulsanpes Dacentrurus</p>
                 <div class="project-container">
                     <div class="project-card" style="background-image: url('images/projects/aliens.jpg');">
-                        <div class="text">Alien Abductions</div>
+                        <div class="text-container">
+                            <div class="text">Alien Abductions</div>
+                        </div>
                     </div>
                     <div class="project-card" style="background-image: url('images/projects/bojack.png');">
-                        <div class="text">Become Bojack Horseman</div>
+                        <div class="text-container">
+                            <div class="text">Become Bojack Horseman</div>
+                        </div>
                     </div>
                     <div class="project-card" style="background-image: url('images/projects/guitar.jpg');">
-                        <div class="text">Guitar Wars</div>
+                        <div class="text-container">
+                            <div class="text">Guitar Wars</div>
+                        </div>
                     </div>
-                    <div class="project-card" style="background-image: url('images/projects/mismatch.jpg');"><div class="text">Mismatch Me</div>
+                    <div class="project-card" style="background-image: url('images/projects/mismatch.jpg');">
+                        <div class="text-container">
+                            <div class="text">Mismatch Me</div>
+                        </div>
                     </div>
-                    <div class="project-card" style="background-image: url('images/projects/riskyBiz.jpg');"><div class="text">Risky Businesses</div>
+                    <div class="project-card" style="background-image: url('images/projects/riskyBiz.jpg');">
+                        <div class="text-container">
+                            <div class="text">Risky Businesses</div>
+                        </div>
                     </div>
-                    <div class="project-card" style="background-image: url('images/projects/tincat.png');"><div class="text">Tincat</div>
+                    <div class="project-card" style="background-image: url('images/projects/tincat.png');">
+                        <div class="text-container">
+                            <div class="text">Tincat</div>
+                        </div>
                     </div>
-                    <!-- <img class="card" src="images/projects/aliens.jpg" id="aliens" alt="">
-                    <img class="card" src="images/projects/bojack.png" id="bojack" alt="">
-                    <img class="card" src="images/projects/guitar.jpg" id="guitar" alt="">
-                    <img class="card" src="images/projects/mismatch.jpg" id="mismatch" alt="">
-                    <img class="card" src="images/projects/riskybiz.jpg" id="riskybiz" alt="">
-                    <img class="card" src="images/projects/tincat.png" id="tincat" alt=""> -->
                 </div>
             </section>
             <!-- SERVICES SECTION -->
@@ -311,16 +320,21 @@
         <!-- https://unsplash.com/@iurte -->
         <!-- the riskyBiz -->
         <!-- https://unsplash.com/@goldencoastgrams -->
-        <!-- <script>
-            function toggleArrowHome() {
-                var myArrowHome = document.getElementById('arrow-home');
-                var displaySetting = myArrowHome.style.display;
-                if(displaySetting == 'block') {
-                    myArrowHome.style.display = 'none';
-                } else {
+        <script>
+            let myArrowHome = document.getElementById('arrow-home');
+            window.onscroll = function() { scrollFunction() };
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
                     myArrowHome.style.display = 'block';
+                } else {
+                    myArrowHome.style.display = 'none';
                 }
             }
-        </script> -->
+
+            function topFunction() {
+              document.body.scrollTop = 0; // For Safari
+              document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            }
+        </script>
     </body>
 </html>
